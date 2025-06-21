@@ -2,7 +2,7 @@ Vin = 36;
 Vo = 18;
 D = Vo/Vin;
 fsw = 100e3;
-Rload = Vout^2/60;  % Pout = 60W → R = V^2/P = 5.4Ω
+Rload = Vo^2/60;  % Pout = 60W → R = V^2/P = 5.4Ω
 R_change = 10;
 
 IL = Vo/Rload;
@@ -29,7 +29,7 @@ outer_Ki  = 2 * pi * outer_Fbi * outer_Kp;    % Ki_v = 2πf * Kp
 
 inner_Fbp = fsw / 200;              % Bandwidth Proportional Current (500 Hz)
 inner_Fbi = inner_Fbp / 10;        % Bandwidth Integral Current (50 Hz)
-inner_Fbd = inner_Fbp * 10;  
+inner_Fbd = inner_Fbp * 10;
 
 inner_Kp  = 2 * pi * inner_Fbp * L;           % Kp_i = 2πfL
 inner_Ki  = 2 * pi * inner_Fbi * inner_Kp;    % Ki_i = 2πf * Kp
