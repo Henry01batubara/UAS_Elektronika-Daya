@@ -10,7 +10,8 @@ Iout_ripple = 0.2 * IL;
 Vout_ripple = 0.02 * Vo;
 
 L = (Vo * (1 - D)) / (Iout_ripple * fsw);    % 1.35e-4
-C = (Vo * (1 - D)) / (8 * L * fsw^2 * Vout_ripple);    % 2.31e-6
+C = (Iout_ripple) / (8 *fsw * Vout_ripple);    % 2.31e-6
+s = tf('s');
 
 
 % OUTER LOOP (Voltage)
