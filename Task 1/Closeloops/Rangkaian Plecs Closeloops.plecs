@@ -3,7 +3,7 @@ Plecs {
   Version       "4.9"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
-  TimeSpan      "2.0"
+  TimeSpan      "15"
   Timeout       ""
   Solver        "auto"
   MaxStep       "1e-3"
@@ -28,7 +28,7 @@ Plecs {
   AlgebraicLoopWithStateMachineMsg "3"
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
-  InitializationCommands "parameter.closeloops"
+  InitializationCommands "parameter_closeloops"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -53,9 +53,9 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [0, 23; 1280, 677]
-    ZoomFactor    0.583096
-    SliderPosition [0, 0]
+    Location      [0, 26; 1280, 680]
+    ZoomFactor    0.873847
+    SliderPosition [80, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -996,7 +996,7 @@ Plecs {
       LabelPosition north
       Parameter {
         Variable      "Filename"
-        Value         ""
+        Value         "IL_closeloops"
         Show          off
         Evaluate      off
       }
@@ -1072,11 +1072,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 23; 1280, 699]
+      Location      [0, 26; 1280, 705]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAABQAAAAKJAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAABQAAAAKMAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -1153,7 +1153,7 @@ Plecs {
       LabelPosition north
       Parameter {
         Variable      "Filename"
-        Value         ""
+        Value         "Vo_closeloops"
         Show          off
         Evaluate      off
       }
@@ -1174,24 +1174,10 @@ Plecs {
       }
     }
     Component {
-      Type          Resistor
-      Name          "R1"
-      Show          on
-      Position      [1335, 315]
-      Direction     up
-      Flipped       off
-      LabelPosition east
-      Parameter {
-        Variable      "R"
-        Value         "Rload"
-        Show          off
-      }
-    }
-    Component {
       Type          Step
       Name          "Step1"
       Show          on
-      Position      [75, 760]
+      Position      [85, 770]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1220,7 +1206,7 @@ Plecs {
       Type          Sum
       Name          "Sum3"
       Show          off
-      Position      [135, 760]
+      Position      [145, 770]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1250,7 +1236,7 @@ Plecs {
       SrcComponent  "Components/Control/Continuous/Continuous PID\\nController"
       Name          "Continuous PID\nController2"
       Show          on
-      Position      [235, 760]
+      Position      [245, 770]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1396,7 +1382,7 @@ Plecs {
       SrcComponent  "Components/Control/Continuous/Continuous PID\\nController"
       Name          "Continuous PID\nController3"
       Show          on
-      Position      [405, 760]
+      Position      [415, 770]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1541,7 +1527,7 @@ Plecs {
       Type          From
       Name          "From6"
       Show          off
-      Position      [280, 870]
+      Position      [290, 880]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1565,7 +1551,7 @@ Plecs {
       Type          Gain
       Name          "R2"
       Show          on
-      Position      [355, 870]
+      Position      [365, 880]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1599,7 +1585,7 @@ Plecs {
       Type          Sum
       Name          "Sum4"
       Show          off
-      Position      [315, 760]
+      Position      [325, 770]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1628,7 +1614,7 @@ Plecs {
       Type          Sum
       Name          "Sum5"
       Show          off
-      Position      [510, 760]
+      Position      [520, 770]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1657,7 +1643,7 @@ Plecs {
       Type          From
       Name          "From7"
       Show          off
-      Position      [460, 685]
+      Position      [470, 695]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1681,7 +1667,7 @@ Plecs {
       Type          Gain
       Name          "Gain"
       Show          on
-      Position      [565, 760]
+      Position      [575, 770]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1715,7 +1701,7 @@ Plecs {
       Type          Sum
       Name          "Sum6"
       Show          off
-      Position      [635, 760]
+      Position      [645, 770]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1744,7 +1730,7 @@ Plecs {
       Type          Sum
       Name          "Sum7"
       Show          off
-      Position      [705, 760]
+      Position      [715, 770]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1773,7 +1759,7 @@ Plecs {
       Type          TransferFunction
       Name          "Transfer Fcn"
       Show          on
-      Position      [800, 760]
+      Position      [810, 770]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1798,7 +1784,7 @@ Plecs {
       Type          TransferFunction
       Name          "Transfer Fcn1"
       Show          on
-      Position      [925, 760]
+      Position      [935, 770]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1810,7 +1796,7 @@ Plecs {
       }
       Parameter {
         Variable      "Denominator"
-        Value         "[s]"
+        Value         "[1 0]"
         Show          off
       }
       Parameter {
@@ -1823,7 +1809,7 @@ Plecs {
       Type          Sum
       Name          "Sum8"
       Show          off
-      Position      [1045, 760]
+      Position      [1055, 770]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1852,7 +1838,7 @@ Plecs {
       Type          Goto
       Name          "Goto2"
       Show          off
-      Position      [990, 710]
+      Position      [1000, 720]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1876,7 +1862,7 @@ Plecs {
       Type          TransferFunction
       Name          "Transfer Fcn2"
       Show          on
-      Position      [1120, 760]
+      Position      [1130, 770]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1901,7 +1887,7 @@ Plecs {
       Type          TransferFunction
       Name          "Transfer Fcn3"
       Show          on
-      Position      [1240, 760]
+      Position      [1250, 770]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1913,7 +1899,7 @@ Plecs {
       }
       Parameter {
         Variable      "Denominator"
-        Value         "[s]"
+        Value         "[1 0]"
         Show          off
       }
       Parameter {
@@ -1926,7 +1912,7 @@ Plecs {
       Type          Goto
       Name          "Goto3"
       Show          off
-      Position      [1350, 760]
+      Position      [1360, 770]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1950,7 +1936,7 @@ Plecs {
       Type          Gain
       Name          "Gain1"
       Show          on
-      Position      [1120, 840]
+      Position      [1130, 850]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -1984,7 +1970,7 @@ Plecs {
       Type          From
       Name          "From8"
       Show          off
-      Position      [1325, 585]
+      Position      [1380, 890]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2008,7 +1994,7 @@ Plecs {
       Type          From
       Name          "From9"
       Show          off
-      Position      [1335, 615]
+      Position      [1390, 920]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2032,7 +2018,7 @@ Plecs {
       Type          From
       Name          "From10"
       Show          off
-      Position      [1370, 680]
+      Position      [1390, 820]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2056,7 +2042,7 @@ Plecs {
       Type          From
       Name          "From11"
       Show          off
-      Position      [1370, 710]
+      Position      [1390, 850]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2080,7 +2066,7 @@ Plecs {
       Type          SignalMux
       Name          "Mux"
       Show          off
-      Position      [1385, 595]
+      Position      [1440, 900]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2094,7 +2080,7 @@ Plecs {
       Type          SignalMux
       Name          "Mux1"
       Show          off
-      Position      [1410, 685]
+      Position      [1430, 825]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2108,7 +2094,7 @@ Plecs {
       Type          Scope
       Name          "Scope2"
       Show          on
-      Position      [1430, 595]
+      Position      [1485, 900]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -2159,7 +2145,7 @@ Plecs {
       Type          Scope
       Name          "Scope3"
       Show          on
-      Position      [1470, 685]
+      Position      [1490, 825]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -2204,6 +2190,69 @@ Plecs {
           KeepBaseline  off
           BaselineValue 0
         }
+      }
+    }
+    Component {
+      Type          Reference
+      SrcComponent  "Components/Electrical/Passive Components/R3"
+      Name          "R3"
+      Show          on
+      Position      [1335, 315]
+      Direction     down
+      Flipped       on
+      LabelPosition west
+      Frame         [-8, -15; 8, 15]
+      ComponentAssertion {
+        SignalName       "Resistor current"
+        TrSignalName     "Resistor current"
+        LowerLimit       "0"
+        UpperLimit       "100"
+        IncludeLimits    off
+        Action           "2"
+      }
+      Terminal {
+        Type          Port
+        Position      [0, -20]
+        Direction     up
+      }
+      Terminal {
+        Type          Port
+        Position      [0, 20]
+        Direction     down
+      }
+      Terminal {
+        Type          Input
+        Position      [-10, 10]
+        Direction     left
+      }
+    }
+    Component {
+      Type          Step
+      Name          "Step2"
+      Show          on
+      Position      [1270, 475]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Time"
+        Value         "5.4"
+        Show          off
+      }
+      Parameter {
+        Variable      "Before"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "After"
+        Value         "10"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
       }
     }
     Connection {
@@ -2253,7 +2302,7 @@ Plecs {
         Branch {
           Points        [1335, 390]
           Branch {
-            DstComponent  "R1"
+            DstComponent  "R3"
             DstTerminal   2
           }
           Branch {
@@ -2281,7 +2330,7 @@ Plecs {
           DstTerminal   1
         }
         Branch {
-          DstComponent  "R1"
+          DstComponent  "R3"
           DstTerminal   1
         }
       }
@@ -2492,7 +2541,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From6"
       SrcTerminal   1
-      Points        [315, 870]
+      Points        [325, 880]
       Branch {
         DstComponent  "R2"
         DstTerminal   1
@@ -2520,7 +2569,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From7"
       SrcTerminal   1
-      Points        [510, 685]
+      Points        [520, 695]
       DstComponent  "Sum5"
       DstTerminal   2
     }
@@ -2528,7 +2577,7 @@ Plecs {
       Type          Signal
       SrcComponent  "R2"
       SrcTerminal   2
-      Points        [510, 870]
+      Points        [520, 880]
       DstComponent  "Sum5"
       DstTerminal   4
     }
@@ -2571,7 +2620,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Transfer Fcn1"
       SrcTerminal   2
-      Points        [970, 760]
+      Points        [980, 770]
       Branch {
         DstComponent  "Sum8"
         DstTerminal   2
@@ -2599,28 +2648,28 @@ Plecs {
       Type          Signal
       SrcComponent  "Transfer Fcn3"
       SrcTerminal   2
-      Points        [1300, 760]
+      Points        [1310, 770]
       Branch {
-        Points        [1315, 760]
+        Points        [1325, 770]
         Branch {
           DstComponent  "Goto3"
           DstTerminal   1
         }
         Branch {
-          Points        [1315, 925]
+          Points        [1325, 935]
           Branch {
-            Points        [705, 925]
+            Points        [715, 935]
             DstComponent  "Sum7"
             DstTerminal   3
           }
           Branch {
-            Points        [1315, 1010; 635, 1010]
+            Points        [1325, 1020; 645, 1020]
             Branch {
               DstComponent  "Sum6"
               DstTerminal   3
             }
             Branch {
-              Points        [135, 1010]
+              Points        [145, 1020]
               DstComponent  "Sum3"
               DstTerminal   3
             }
@@ -2628,7 +2677,7 @@ Plecs {
         }
       }
       Branch {
-        Points        [1300, 840]
+        Points        [1310, 850]
         DstComponent  "Gain1"
         DstTerminal   1
       }
@@ -2637,7 +2686,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Gain1"
       SrcTerminal   2
-      Points        [1045, 840]
+      Points        [1055, 850]
       DstComponent  "Sum8"
       DstTerminal   3
     }
@@ -2645,7 +2694,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From8"
       SrcTerminal   1
-      Points        [1355, 585; 1355, 590]
+      Points        [1410, 890; 1410, 895]
       DstComponent  "Mux"
       DstTerminal   2
     }
@@ -2653,7 +2702,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From9"
       SrcTerminal   1
-      Points        [1360, 615; 1360, 600]
+      Points        [1415, 920; 1415, 905]
       DstComponent  "Mux"
       DstTerminal   3
     }
@@ -2668,7 +2717,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From11"
       SrcTerminal   1
-      Points        [1390, 710; 1390, 690]
+      Points        [1410, 850; 1410, 830]
       DstComponent  "Mux1"
       DstTerminal   3
     }
@@ -2685,6 +2734,14 @@ Plecs {
       SrcTerminal   1
       DstComponent  "Scope3"
       DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Step2"
+      SrcTerminal   1
+      Points        [1360, 475]
+      DstComponent  "R3"
+      DstTerminal   3
     }
   }
 }
