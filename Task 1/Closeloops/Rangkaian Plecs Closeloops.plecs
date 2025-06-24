@@ -3,7 +3,7 @@ Plecs {
   Version       "4.9"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
-  TimeSpan      "15"
+  TimeSpan      "5"
   Timeout       ""
   Solver        "auto"
   MaxStep       "1e-3"
@@ -53,9 +53,9 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [0, 26; 1280, 680]
-    ZoomFactor    0.873847
-    SliderPosition [80, 0]
+    Location      [0, 23; 1280, 677]
+    ZoomFactor    0.583096
+    SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -273,7 +273,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Time"
-        Value         "1.2"
+        Value         "1.3"
         Show          off
       }
       Parameter {
@@ -367,12 +367,12 @@ Plecs {
       }
       Parameter {
         Variable      "kp"
-        Value         "5*outer_Kp"
+        Value         "100*outer_Kp"
         Show          off
       }
       Parameter {
         Variable      "ki"
-        Value         "2*outer_Ki"
+        Value         "80*outer_Ki"
         Show          off
       }
       Parameter {
@@ -566,7 +566,7 @@ Plecs {
       }
       Parameter {
         Variable      "kp"
-        Value         "10*inner_Kp"
+        Value         "20*inner_Kp"
         Show          off
       }
       Parameter {
@@ -2098,11 +2098,17 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 0; 0, 0]
-      State         ""
-      SavedViews    ""
-      HeaderState   ""
-      PlotPalettes  ""
+      Location      [0, 23; 1280, 699]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAABQAAAAKJAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":168,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
       ScrollingMode "1"
@@ -2149,11 +2155,17 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 0; 0, 0]
-      State         ""
-      SavedViews    ""
-      HeaderState   ""
-      PlotPalettes  ""
+      Location      [0, 23; 1280, 699]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAABQAAAAKJAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":177,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
       ScrollingMode "1"
@@ -2202,14 +2214,6 @@ Plecs {
       Flipped       on
       LabelPosition west
       Frame         [-8, -15; 8, 15]
-      ComponentAssertion {
-        SignalName       "Resistor current"
-        TrSignalName     "Resistor current"
-        LowerLimit       "0"
-        UpperLimit       "100"
-        IncludeLimits    off
-        Action           "2"
-      }
       Terminal {
         Type          Port
         Position      [0, -20]
@@ -2236,17 +2240,17 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Time"
-        Value         "5.4"
+        Value         "1.3"
         Show          off
       }
       Parameter {
         Variable      "Before"
-        Value         "1"
+        Value         "Rload"
         Show          off
       }
       Parameter {
         Variable      "After"
-        Value         "10"
+        Value         "R_change"
         Show          off
       }
       Parameter {
