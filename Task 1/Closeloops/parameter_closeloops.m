@@ -24,11 +24,7 @@ outer_Ki  = 2 * pi * outer_Fbi * outer_Kp;    % Ki_v = 2πf * Kp
 % INNER LOOP (Current)
 
 inner_Fbp = fsw / 200;              % Bandwidth Proportional Current (500 Hz)
-inner_Fbi = inner_Fbp / 10;        % Bandwidth Integral Current (50 Hz)
-inner_Fbd = inner_Fbp * 10;
-
 inner_Kp  = 2 * pi * inner_Fbp * L;           % Kp_i = 2πfL
-inner_Ki  = 2 * pi * inner_Fbi * inner_Kp;    % Ki_i = 2πf * Kp
-inner_Kd  = 1 / (2 * pi * inner_Fbd * L);     % Kd_i ≈ 1 / (2πfL)
+
 
 
