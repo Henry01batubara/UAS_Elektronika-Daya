@@ -28,7 +28,20 @@ Plecs {
   AlgebraicLoopWithStateMachineMsg "3"
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
-  InitializationCommands "parameter_closeloops"
+  InitializationCommands base64 "VmluID0gMzY7ClZvID0gMTg7CkQgPSBWby9WaW47CmZzd"
+"yA9IDEwMGUzOwpSbG9hZCA9IFZvXjIvNjA7ICAlIFBvdXQgPSA2MFcg4oaSIFIgPSBWXjIvUCA9ID"
+"UuNM6pClJfY2hhbmdlID0gMTA7CgpJTCA9IFZvL1Jsb2FkOwpJb3V0X3JpcHBsZSA9IDAuMiAqIEl"
+"MOwpWb3V0X3JpcHBsZSA9IDAuMDIgKiBWbzsKCkwgPSAoVm8gKiAoMSAtIEQpKSAvIChJb3V0X3Jp"
+"cHBsZSAqIGZzdyk7ICAgICUgMS4zNWUtNApDID0gKElvdXRfcmlwcGxlKSAvICg4ICpmc3cgKiBWb"
+"3V0X3JpcHBsZSk7ICAgICUgMi4zMWUtNgoKCiUgT1VURVIgTE9PUCAoVm9sdGFnZSkKCm91dGVyX0"
+"ZicCA9IGZzdyAvIDIwOyAgICAgICAgICAgICAgJSBCYW5kd2lkdGggUHJvcG9ydGlvbmFsIFZvbHR"
+"hZ2UgKDUga0h6KQpvdXRlcl9GYmkgPSBvdXRlcl9GYnAgLyAxMDsgICAgICAgICUgQmFuZHdpZHRo"
+"IEludGVncmFsIFZvbHRhZ2UgKDUwMCBIeikKCm91dGVyX0twICA9IDIgKiBwaSAqIG91dGVyX0Zic"
+"CAqIEM7ICAgICAgICAgICAlIEtwX3YgPSAyz4BmQwpvdXRlcl9LaSAgPSAyICogcGkgKiBvdXRlcl"
+"9GYmkgKiBvdXRlcl9LcDsgICAgJSBLaV92ID0gMs+AZiAqIEtwCgolIElOTkVSIExPT1AgKEN1cnJ"
+"lbnQpCgppbm5lcl9GYnAgPSBmc3cgLyAyMDA7ICAgICAgICAgICAgICAlIEJhbmR3aWR0aCBQcm9w"
+"b3J0aW9uYWwgQ3VycmVudCAoNTAwIEh6KQppbm5lcl9LcCAgPSAyICogcGkgKiBpbm5lcl9GYnAgK"
+"iBMOyAgICAgICAgICAgJSBLcF9pID0gMs+AZkwKCgoK"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -556,7 +569,7 @@ Plecs {
       Frame         [-40, -25; 40, 25]
       Parameter {
         Variable      "cont_type"
-        Value         "3"
+        Value         "1"
         Show          off
       }
       Parameter {
@@ -911,12 +924,12 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Min"
-        Value         "-5"
+        Value         "-0.5"
         Show          off
       }
       Parameter {
         Variable      "Max"
-        Value         "5"
+        Value         "0.5"
         Show          off
       }
       Parameter {
@@ -1075,20 +1088,20 @@ Plecs {
       Location      [0, 26; 1280, 705]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAABQAAAAKMAAAA"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAUAAAAAmfw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABQAAAABQAP///wAABQAAAAHvAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":63,\"Labels\":[],"
-"\"VisualIdxs\":[]}"
+      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":177,\"Labels\":["
+"\"Min\",\"Max\"],\"VisualIdxs\":[5,6]}"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
       Axes          "2"
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -1183,7 +1196,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Time"
-        Value         "1.2"
+        Value         "1"
         Show          off
       }
       Parameter {
@@ -1254,152 +1267,6 @@ Plecs {
       Parameter {
         Variable      "kp"
         Value         "8*outer_Kp"
-        Show          off
-      }
-      Parameter {
-        Variable      "ki"
-        Value         "5*outer_Ki"
-        Show          off
-      }
-      Parameter {
-        Variable      "kd"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "kf"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "ex_reset"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "x0_source"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "x0"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "ex_sat"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "sat_lim"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "up_limit"
-        Value         "inf"
-        Show          off
-      }
-      Parameter {
-        Variable      "low_limit"
-        Value         "-inf"
-        Show          off
-      }
-      Parameter {
-        Variable      "aw_method"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "kbc"
-        Value         "1"
-        Show          off
-      }
-      Terminal {
-        Type          Input
-        Position      [-40, 0]
-        Direction     left
-      }
-      Terminal {
-        Type          Output
-        Position      [44, 0]
-        Direction     right
-      }
-      Terminal {
-        Type          Input
-        Position      [-5, -25]
-        Direction     up
-      }
-      Terminal {
-        Type          Input
-        Position      [5, -25]
-        Direction     up
-      }
-      Terminal {
-        Type          Input
-        Position      [15, -25]
-        Direction     up
-      }
-      Terminal {
-        Type          Input
-        Position      [-40, -15]
-        Direction     left
-      }
-      Terminal {
-        Type          Input
-        Position      [-40, 10]
-        Direction     left
-      }
-      Terminal {
-        Type          Input
-        Position      [25, -25]
-        Direction     up
-      }
-      Terminal {
-        Type          Input
-        Position      [35, -25]
-        Direction     up
-      }
-      Terminal {
-        Type          Input
-        Position      [-40, -20]
-        Direction     left
-      }
-      Terminal {
-        Type          Input
-        Position      [-40, -10]
-        Direction     left
-      }
-      Terminal {
-        Type          Input
-        Position      [-40, 20]
-        Direction     left
-      }
-    }
-    Component {
-      Type          Reference
-      SrcComponent  "Components/Control/Continuous/Continuous PID\\nController"
-      Name          "Continuous PID\nController3"
-      Show          on
-      Position      [415, 770]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Frame         [-40, -25; 40, 25]
-      Parameter {
-        Variable      "cont_type"
-        Value         "3"
-        Show          off
-      }
-      Parameter {
-        Variable      "par_source"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "kp"
-        Value         "7*inner_Kp"
         Show          off
       }
       Parameter {
@@ -2098,11 +1965,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 23; 1280, 699]
+      Location      [0, 26; 1280, 705]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAABQAAAAKJAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAABQAAAAKMAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -2155,11 +2022,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 23; 1280, 699]
+      Location      [0, 26; 1280, 705]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAABQAAAAKJAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAABQAAAAKMAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -2206,56 +2073,161 @@ Plecs {
     }
     Component {
       Type          Reference
-      SrcComponent  "Components/Electrical/Passive Components/R3"
-      Name          "R3"
+      SrcComponent  "Components/Control/Continuous/Continuous PID\\nController"
+      Name          "Continuous PID\nController3"
       Show          on
-      Position      [1335, 315]
-      Direction     down
-      Flipped       on
-      LabelPosition west
-      Frame         [-8, -15; 8, 15]
-      Terminal {
-        Type          Port
-        Position      [0, -20]
-        Direction     up
+      Position      [415, 770]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Frame         [-40, -25; 40, 25]
+      Parameter {
+        Variable      "cont_type"
+        Value         "1"
+        Show          off
       }
-      Terminal {
-        Type          Port
-        Position      [0, 20]
-        Direction     down
+      Parameter {
+        Variable      "par_source"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "kp"
+        Value         "7*inner_Kp"
+        Show          off
+      }
+      Parameter {
+        Variable      "ki"
+        Value         "5*outer_Ki"
+        Show          off
+      }
+      Parameter {
+        Variable      "kd"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "kf"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "ex_reset"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "x0_source"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "x0"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "ex_sat"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "sat_lim"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "up_limit"
+        Value         "inf"
+        Show          off
+      }
+      Parameter {
+        Variable      "low_limit"
+        Value         "-inf"
+        Show          off
+      }
+      Parameter {
+        Variable      "aw_method"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "kbc"
+        Value         "1"
+        Show          off
       }
       Terminal {
         Type          Input
-        Position      [-10, 10]
+        Position      [-40, 0]
+        Direction     left
+      }
+      Terminal {
+        Type          Output
+        Position      [44, 0]
+        Direction     right
+      }
+      Terminal {
+        Type          Input
+        Position      [-5, -25]
+        Direction     up
+      }
+      Terminal {
+        Type          Input
+        Position      [5, -25]
+        Direction     up
+      }
+      Terminal {
+        Type          Input
+        Position      [15, -25]
+        Direction     up
+      }
+      Terminal {
+        Type          Input
+        Position      [-40, -15]
+        Direction     left
+      }
+      Terminal {
+        Type          Input
+        Position      [-40, 10]
+        Direction     left
+      }
+      Terminal {
+        Type          Input
+        Position      [25, -25]
+        Direction     up
+      }
+      Terminal {
+        Type          Input
+        Position      [35, -25]
+        Direction     up
+      }
+      Terminal {
+        Type          Input
+        Position      [-40, -20]
+        Direction     left
+      }
+      Terminal {
+        Type          Input
+        Position      [-40, -10]
+        Direction     left
+      }
+      Terminal {
+        Type          Input
+        Position      [-40, 20]
         Direction     left
       }
     }
     Component {
-      Type          Step
-      Name          "Step2"
+      Type          Resistor
+      Name          "R1"
       Show          on
-      Position      [1270, 475]
-      Direction     right
+      Position      [1335, 315]
+      Direction     up
       Flipped       off
-      LabelPosition south
+      LabelPosition east
       Parameter {
-        Variable      "Time"
-        Value         "1.5"
-        Show          off
-      }
-      Parameter {
-        Variable      "Before"
+        Variable      "R"
         Value         "Rload"
-        Show          off
-      }
-      Parameter {
-        Variable      "After"
-        Value         "R_change"
-        Show          off
-      }
-      Parameter {
-        Variable      "DataType"
-        Value         "10"
         Show          off
       }
     }
@@ -2306,7 +2278,7 @@ Plecs {
         Branch {
           Points        [1335, 390]
           Branch {
-            DstComponent  "R3"
+            DstComponent  "R1"
             DstTerminal   2
           }
           Branch {
@@ -2334,7 +2306,7 @@ Plecs {
           DstTerminal   1
         }
         Branch {
-          DstComponent  "R3"
+          DstComponent  "R1"
           DstTerminal   1
         }
       }
@@ -2738,14 +2710,6 @@ Plecs {
       SrcTerminal   1
       DstComponent  "Scope3"
       DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Step2"
-      SrcTerminal   1
-      Points        [1360, 475]
-      DstComponent  "R3"
-      DstTerminal   3
     }
   }
 }
