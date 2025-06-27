@@ -1009,7 +1009,7 @@ Plecs {
       LabelPosition north
       Parameter {
         Variable      "Filename"
-        Value         "IL_closeloops"
+        Value         "IL_closeloops parameter vref diubah"
         Show          off
         Evaluate      off
       }
@@ -1166,7 +1166,7 @@ Plecs {
       LabelPosition north
       Parameter {
         Variable      "Filename"
-        Value         "Vo_closeloops"
+        Value         "Vo_closeloops parameter vref diubah"
         Show          off
         Evaluate      off
       }
@@ -1183,35 +1183,6 @@ Plecs {
       Parameter {
         Variable      "SampleTime"
         Value         "0"
-        Show          off
-      }
-    }
-    Component {
-      Type          Step
-      Name          "Step1"
-      Show          on
-      Position      [85, 770]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "Time"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "Before"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "After"
-        Value         "D*Vin"
-        Show          off
-      }
-      Parameter {
-        Variable      "DataType"
-        Value         "10"
         Show          off
       }
     }
@@ -1785,7 +1756,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Tag"
-        Value         "Vo_Block"
+        Value         "Vo_Block Diagaram"
         Show          off
       }
       Parameter {
@@ -1867,7 +1838,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Tag"
-        Value         "Vo_Block"
+        Value         "Vo_Block Diagaram"
         Show          off
       }
       Parameter {
@@ -2289,6 +2260,93 @@ Plecs {
         Show          off
       }
     }
+    Component {
+      Type          Step
+      Name          "Step1"
+      Show          on
+      Position      [60, 815]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Time"
+        Value         "1"
+        Show          on
+      }
+      Parameter {
+        Variable      "Before"
+        Value         "1"
+        Show          on
+      }
+      Parameter {
+        Variable      "After"
+        Value         "D*Vin"
+        Show          on
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Step
+      Name          "Step3"
+      Show          on
+      Position      [60, 920]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Time"
+        Value         "1.2"
+        Show          on
+      }
+      Parameter {
+        Variable      "Before"
+        Value         "0"
+        Show          on
+      }
+      Parameter {
+        Variable      "After"
+        Value         "1"
+        Show          on
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Sum
+      Name          "Sum10"
+      Show          off
+      Position      [105, 815]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "IconShape"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "|++"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "11"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataTypeOverflowMode"
+        Value         "1"
+        Show          off
+      }
+    }
     Connection {
       Type          Wire
       SrcComponent  "Vin"
@@ -2545,13 +2603,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Step1"
-      SrcTerminal   1
-      DstComponent  "Sum3"
-      DstTerminal   2
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "Sum3"
       SrcTerminal   1
       DstComponent  "Continuous PID\nController2"
@@ -2784,6 +2835,28 @@ Plecs {
       DstComponent  "Sum9"
       DstTerminal   3
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "Step1"
+      SrcTerminal   1
+      DstComponent  "Sum10"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Step3"
+      SrcTerminal   1
+      Points        [105, 920]
+      DstComponent  "Sum10"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sum10"
+      SrcTerminal   1
+      DstComponent  "Sum3"
+      DstTerminal   2
+    }
     RectangleAnnotation {
       Position     [65, 580]
       Width        110
@@ -2798,6 +2871,21 @@ Plecs {
     Annotation {
       Name          "<html><body>\n<p>vref diubah</p></body></html>"
       Position      [60, 455]
+    } 
+    RectangleAnnotation {
+      Position     [65, 890]
+      Width        110
+      Height       220
+      CornerRadius 2
+      Thickness    1
+      PenColor     4294901760
+      PenAlpha     1
+      BrushColor   0
+      BrushAlpha   0
+    } 
+    Annotation {
+      Name          "<html><body>\n<p>vref diubah</p></body></html>"
+      Position      [60, 765]
     } 
   }
 }
